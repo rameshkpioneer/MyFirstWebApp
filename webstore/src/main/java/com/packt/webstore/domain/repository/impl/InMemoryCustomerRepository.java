@@ -30,10 +30,10 @@ public class InMemoryCustomerRepository implements CustomerRepository {
 		
 		 public Customer mapRow(ResultSet rs, int rowNum)throws SQLException {  
 			 Customer customer = new Customer(); 
-			 customer.setcusstomerId(rs.getInt("ID"));
+			/* customer.setcusstomerId(rs.getInt("ID"));
 			 customer.setCustomer_name(rs.getString("NAME"));
 			 customer.setAddress(rs.getString("ADRESS"));
-			 customer.setNo_of_orders_made(rs.getInt("NOOFORDERS"));
+			 customer.setNo_of_orders_made(rs.getInt("NOOFORDERS"));*/
             return customer;  
             } 
 		 
@@ -47,10 +47,10 @@ public class InMemoryCustomerRepository implements CustomerRepository {
 				+ "NOOFORDERS) "
 				+ "VALUES (:id, :name, :adress, :nooforders)";
 				Map<String, Object> params = new HashMap<>();
-				params.put("id",customer.getcusstomerId());
+			/*	params.put("id",customer.getcusstomerId());
 				params.put("name", customer.getCustomer_name());
 				params.put("adress", customer.getAddress());
-				params.put("nooforders", customer.getNo_of_orders_made());
+				params.put("nooforders", customer.getNo_of_orders_made());*/
 				jdbcTemplate.update(SQL, params);
 		
 		

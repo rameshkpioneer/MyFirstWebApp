@@ -24,7 +24,10 @@ cart</p>
 <div>
 <a class="btn btn-danger pull-left" ng-click="clearCart()"> 
 <span class="glyphicon glyphicon-removesign"></span> Clear Cart
-</a> <a href="#" class="btn btn-success pull-right"> <span class="glyphicon-shopping-cart glyphicon"></span> Check out
+</a> <a href= "<spring:url value="/checkout?cartId=${cartId}"/>"
+class="btn btn-success pull-right">
+<span class="glyphicon-shopping-cart glyphicon">
+</span> Check out
 </a>
 </div>
 <table class="table table-hover">

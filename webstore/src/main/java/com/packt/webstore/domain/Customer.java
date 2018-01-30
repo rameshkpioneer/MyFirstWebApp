@@ -1,48 +1,83 @@
-
 package com.packt.webstore.domain;
 
-public class Customer {
+import java.io.Serializable;
 
-	private int cusstomerId;
-	
-	private String customer_name;
-	
-	private String address;
-	
-	private  int no_of_orders_made;
+public class Customer implements Serializable {
+	private static final long serialVersionUID = 2284040482222162898L;
+	private Long customerId;
+	private String name;
+	private Address billingAddress;
+	private String phoneNumber;
 
-	
-	public int getcusstomerId() {
-		return cusstomerId;
+	public Customer() {
+		super();
+		this.billingAddress = new Address();
 	}
 
-	public void setcusstomerId(int id) {
-		this.cusstomerId = id;
+	public Customer(Long customerId, String name) {
+		this();
+		this.customerId = customerId;
+		this.name = name;
 	}
 
-	public String getCustomer_name() {
-		return customer_name;
+	public Long getCustomerId() {
+		return customerId;
 	}
 
-	public void setCustomer_name(String customer_name) {
-		this.customer_name = customer_name;
+	public void setCustomerId(long customerId) {
+		this.customerId = customerId;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getName() {
+		return name;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public int getNo_of_orders_made() {
-		return no_of_orders_made;
+	public Address getBillingAddress() {
+		return billingAddress;
 	}
 
-	public void setNo_of_orders_made(int no_of_orders_made) {
-		this.no_of_orders_made = no_of_orders_made;
+	public void setBillingAddress(Address billingAddress) {
+		this.billingAddress = billingAddress;
 	}
 
-	
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((customerId == null) ? 0 : customerId.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Customer other = (Customer) obj;
+		if (customerId == null) {
+			if (other.customerId != null)
+				return false;
+		} else if (!customerId.equals(other.customerId))
+			return false;
+		return true;
+	}
 }
