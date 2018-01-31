@@ -9,7 +9,7 @@
     <title>Products</title> 
    </head> 
     <body> 
-  <section>  
+ <!--  <section>  
 <div class="jumbotron">
  <div class="container"> 
  <h1>Products</h1> 
@@ -17,7 +17,7 @@
   <p>
 
  </div> 
-    </div>  </section> 
+    </div>  </section>  -->
  <section class="container">
   <div class="row">   
  <c:forEach items="${products}" var="product">  

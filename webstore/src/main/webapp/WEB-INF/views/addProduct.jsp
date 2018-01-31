@@ -20,14 +20,14 @@ href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 			<a href="<c:url value="/logout" />">Logout</a>
 		</div>
 </section>
-<section>
+<!-- <section>
 <div class="jumbotron">
 <div class="container">
 <h1>Products</h1>
 <p>Add products</p>
 </div>
 </div>
-</section>
+</section> -->
 <section class="container">
 <form:form method="POST" modelAttribute="newProduct" enctype="multipart/form-data" class="form-horizontal">
 <form:errors path="*" cssClass="alert alert-danger" element="div"/>

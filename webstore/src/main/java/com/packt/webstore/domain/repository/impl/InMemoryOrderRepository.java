@@ -79,7 +79,7 @@ public class InMemoryOrderRepository implements OrderRepository {
 	}
 
 	private long createOrder(Order order) {
-		String SQL = "INSERT INTOORDERS(CART_ID,CUSTOMER_ID,SHIPPING_DETAIL_ID) "
+		String SQL = "INSERT INTO ORDERS(CART_ID,CUSTOMER_ID,SHIPPING_DETAIL_ID) "
 				+ "VALUES (:cartId, :customerId, :shippingDetailId)";
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("id", order.getOrderId());

@@ -8,14 +8,14 @@ href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 <title>Products</title>
 </head>
 <body>
-<section>
+<!-- <section>
 <div class="jumbotron">
 <div class="container">
 <h1>Products</h1>
 <p>Add products</p>
 </div>
 </div>
-</section>
+</section> -->
 <section class="container">
 <form:form method="POST" modelAttribute="newCustomer" class="form-horizontal">
 <fieldset>

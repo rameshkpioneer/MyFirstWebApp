@@ -45,7 +45,7 @@ offset-1 col-sm-offset-1 col-md-offset-3">
 						</div>
 						<div class="col-xs-6 col-sm-6 col-md-6 text-right">
 							<p>
-								<em>Shipping DateDate: <fmt:formatDate type="date"
+								<em>Shipping DateDate: <fmt:formatDate pattern="dd/MM/yyyy"  type="date" 
 										value="${order.shippingDetail.shippingDate}" /></em>
 							</p>
 						</div>

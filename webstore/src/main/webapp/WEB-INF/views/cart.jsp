@@ -10,7 +10,7 @@
 <title>Cart</title>
 </head>
 <body>
-<section>
+<!-- <section>
 <div class="jumbotron">
 <div class="container">
 <h1>Cart</h1>
@@ -18,7 +18,7 @@
 cart</p>
 </div>
 </div>
-</section>
+</section> -->
 <section class="container" ng-app="cartApp">
 <div ng-controller="cartCtrl" ng-init="initCartId('${cartId}')">
 <div>
